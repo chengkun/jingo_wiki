@@ -1,4 +1,4 @@
-# 前言
+# API接口
 ## API V1.1采用RESTful风格。
 有关格式相关的内容请参见 JSON
  JSON格式中的数值规范：
@@ -155,7 +155,8 @@ JOSN
 sensor_id	int	否	传感器ID
 访问授权
 U-ApiKey: <your_api_key>
-编辑传感器
+
+## 编辑传感器
 PUT
 /v1.1/device/<device_id>/sensor/<sensor_id>
 PUT数据
@@ -213,7 +214,8 @@ title	string	标题
 about	string	简介
 访问授权
 U-ApiKey: <your_api_key>
-查看传感器
+
+## 查看传感器
 对该地址发起GET请求将会获得指定ID的传感器的详细信息。
 GET
 /v1.1/device/<device_id>/sensor/<sensor_id>
@@ -235,8 +237,8 @@ tags	string	标签
 unit_name	string	单位名称
 unit_symbol	string	单位符号
 
-删除传感器
-删除指定传感器
+## 删除传感器
+### 删除指定传感器
 DELETE
 /v1.1/device/<device_id>/sensor/<sensor_id>
 返回值
@@ -252,7 +254,8 @@ U-ApiKey: <your_api_key>
 POST
 /v1.1/device/<device_id>/sensor/<sensor_id>/datapoints
 POST数据
-数值型传感器
+
+### 数值型传感器
 {
   "timestamp":"2012-03-15T16:13:14",
   "value":294.34
