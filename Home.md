@@ -18,7 +18,7 @@ POST数据
   "about":"test api",
   "tags":"temperature,lab",
   "location":{
-    "local":"Qingdao",
+    "local":"Yangling",
     "latitude":0.444,
     "longitude":0.555
   }
@@ -245,8 +245,10 @@ DELETE
 返回值为空
 访问授权
 U-ApiKey: <your_api_key>
-数据点
-创建数据点
+
+## 数据点
+
+### 创建数据点
 本章描述了如何为设备的传感器创建数据点。使用HTTP POST方法来使用本URL创建新的数据点。
 创建单个数据点
 为传感器创建一个数据点。
@@ -255,7 +257,7 @@ POST
 /v1.1/device/<device_id>/sensor/<sensor_id>/datapoints
 POST数据
 
-### 数值型传感器
+数值型传感器
 {
   "timestamp":"2012-03-15T16:13:14",
   "value":294.34
@@ -283,7 +285,8 @@ POST
 U-ApiKey: <your_api_key>
 返回值
 返回值为空
-多数据点（同一设备）
+
+### 多数据点（同一设备）
 POST
 /v1.1/device/<device_id>/datapoints
 POST数据
@@ -315,7 +318,8 @@ GPS型传感器
 }
 返回值
 空
-查看数据点
+
+## 查看数据点
 GET
 /v1.1/device/<device_id>/sensor/<sensor_id>/datapoint/<key>
 返回值
@@ -363,8 +367,9 @@ DELETE
  返回值为空
 访问授权
 U-ApiKey: <your_api_key>
-历史数据
-查看历史数据
+
+## 历史数据
+### 查看历史数据
 用于查看指定时间段及指定采样间隔的历史数据。
 GET
 /v1.1/device/<device_id>/sensor/<sensor_id>.json?start=<start_timestamp>&end=<end_timestamp>&interval=<interval>&page=<page>
@@ -388,21 +393,4 @@ JSON
   {"timestamp": "2012-06-15T14:00:20", "value":317},
   {"timestamp": "2012-06-15T14:00:30", "value":317},
   {"timestamp": "2012-06-15T14:00:40", "value":317}
-]
-GPS型传感器
-[
-  {"timestamp": "2012-06-15T14:00:00", "value":{"lat":35.4,"lng":46.1,"speed":98.2}},
-  {"timestamp": "2012-06-15T14:00:10", "value":{"lat":34.1,"lng":76.3,"speed":78.9}},
-  {"timestamp": "2012-06-15T14:00:20", "value":{"lat":36.6,"lng":56.1,"speed":99.3}},
-  {"timestamp": "2012-06-15T14:00:30", "value":{"lat":33.4,"lng":46.34,"speed":120}},
-  {"timestamp": "2012-06-15T14:00:40", "value":{"lat":35.4,"lng":46.1,"speed":98.2}}
-]
-泛型传感器
- 
-图片型传感器
-[
-  {"timestamp": "2012-03-15T16:13:14", "value":{"size":45,"width":240,"height":320,"type":"jpg", url: ''},
-  {"timestamp": "2012-03-15T16:13:24", "value":{"size":180,"width":100,"height":320,"type":"png", url: ''},
-  {"timestamp": "2012-03-15T16:13:34", "value":{"size":1024,"width":480,"height":360,"type":"gif", url: ''},
-  {"timestamp": "2012-03-15T16:13:44", "value":{"size":2000,"width":240,"height":320,"type":"jpg", url: ''},
 ]
