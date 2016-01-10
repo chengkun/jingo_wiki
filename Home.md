@@ -1,5 +1,5 @@
-前言
-API V1.1采用RESTful风格。
+# 前言
+## API V1.1采用RESTful风格。
 有关格式相关的内容请参见 JSON
  JSON格式中的数值规范：
  数值（number）也与C或者Java的数值非常相似。除去未曾使用的八进制与十六进制格式。除去一些编码细节。
@@ -7,7 +7,7 @@ API V1.1采用RESTful风格。
  {value: 0.1} 合法格式
  {value: 00.0} 非法格式
  如果遇到406错误，请先检查是否上传数据格式有误
-设备接口
+## 设备接口
 设备代表一组传感器的集合，设备分为开发设备和终端设备两种。
 创建设备
 POST
@@ -40,7 +40,8 @@ JOSN
 device_id	int	否	设备ID
 访问授权
 U-ApiKey: <your_api_key>
-编辑设备
+
+## 编辑设备
 PUT
 /v1.1/devices/<device_id>
 PUT数据
@@ -66,7 +67,8 @@ location.longitude	float	否	纬度
 返回值为空
 访问授权
 U-ApiKey: <your_api_key>
-罗列设备
+
+## 罗列设备
 GET
 /v1.1/devices
 返回值
@@ -90,7 +92,8 @@ title	string	设备标题
 about	string	设备简介
 访问授权
 U-ApiKey: <your_api_key>
-查看设备
+
+## 查看设备
 GET
 /v1.1/devices/<device_id>
 返回值
@@ -120,7 +123,8 @@ DELETE
 访问授权
 U-ApiKey: <your_api_key>
 传感器
-创建传感器
+
+## 创建传感器
 POST
 /v1.1/device/<device_id>/sensors
 POST数据
@@ -175,7 +179,8 @@ unit.symbol	string	否	符号
 返回值为空
 访问授权
 U-ApiKey: <your_api_key>
-罗列传感器
+
+## 罗列传感器
 GET
 /v1.1/device/<device_id>/sensors
 返回值
