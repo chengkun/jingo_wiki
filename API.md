@@ -1,5 +1,4 @@
-# API接口
-## API V1.1采用RESTful风格。
+## API V0.1采用RESTful风格。
 有关格式相关的内容请参见 [JSON](https://en.wikipedia.org/wiki/JSON)
 
 JSON格式中的数值规范：
