@@ -258,6 +258,8 @@ GET
 该设备的详细信息
 JOSN
 数值型传感器
+
+```
 {
   "title":"test",
   "about":"just a test",
@@ -265,12 +267,14 @@ JOSN
   "unit_name": "temperature",
   "unit_symbol": "C"
 }
-字段	类型	备注
-title	string	标题
-about	string	简介
-tags	string	标签
-unit_name	string	单位名称
-unit_symbol	string	单位符号
+```
+|字段	|类型	|备注|
+|----|----|----:|
+|title|	string|	标题|
+|about|	string|	简介|
+|tags|	string|	标签|
+|unit_name|	string|	单位名称|
+|unit_symbol|	string|	单位符号|
 
 ## 删除传感器
 ### 删除指定传感器
