@@ -231,8 +231,8 @@ GET
 /v1.1/device/<device_id>/sensors
 返回值
 该设备的所有传感器列表信息
-JOSN
-
+JSON
+```
 [
   {
     "id": 2,
@@ -253,6 +253,7 @@ JOSN
     "last_data_gen":{"lat":23.8,"lng":54.5,"speed":45}
   }
 ]
+```
 字段	类型	备注
 id	int	传感器ID
 title	string	标题
